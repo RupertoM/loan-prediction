@@ -156,7 +156,27 @@
         resultsArray.forEach((res) => {
           const loanProbabilityPercentage = res.loan_probability * 100;
           const modelAccuracyPercentage = res.model_accuracy * 100;
-          content += `<li>Probability of approval with ${res.name}: ${loanProbabilityPercentage}% (Confidence: ${modelAccuracyPercentage}%) </li>`;
+          let possibleRevenue = 0;
+
+          switch (res.name) {
+            case "Lender C":
+              possibleRevenue = 150;
+              break;
+            case "Lender B":
+              possibleRevenue = 350;
+              break;
+            case "Lender A":
+              possibleRevenue = 250;
+              break;
+            default:
+              possibleRevenue = 0;
+          }
+
+          content += `<li>Probability of approval with ${
+            res.name
+          }: ${parseFloat(loanProbabilityPercentage).toFixed(
+            2
+          )}% (Confidence: ${modelAccuracyPercentage}%)<br>Possible Revenue: $${possibleRevenue}</li>`;
         });
         content += "</ul>";
 
