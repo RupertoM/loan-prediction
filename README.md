@@ -84,9 +84,11 @@ The dataset used in this project is "Loan_Dataset.xlsx", which contains various 
 
 ## Key Findings
 
-- EDA: The exploratory data analysis revealed strong relationships between loan approval and factors such as FICO score, monthly gross income, and debt-to-income ratio.
-- Machine Learning Models: The project compares the performance of Logistic Regression, Random Forest, and Gradient Boosting models. Random Forest was identified as the most effective model for predicting loan approval, particularly when customized for approvals. The ML models provide us with insight into which lender is best to use for which customers when combined with the GUI.
-  -Further detailed findings: There are many markdown comments within the jupyter notebook "data_processor.ipynb" detailing the results with visual data."
+- **Exploratory Data Analysis (EDA):** The analysis uncovered significant correlations between loan approval rates and several factors, including FICO scores, monthly gross income, and the debt-to-income ratio, highlighting their importance in the loan approval process.
+
+- **Machine Learning Model Comparison:** We evaluated the performance of three models: Logistic Regression, Random Forest, and Gradient Boosting. The Random Forest model emerged as the superior choice for predicting loan approvals, offering insightful predictions that can guide which lender might be best for specific customer profiles.
+
+- **Further Insights:** The "data_processor.ipynb" jupyter notebook contains detailed markdown comments and visual representations of our findings, providing a comprehensive view of our data analysis and modeling efforts.
 
 ## Future Improvements
 
